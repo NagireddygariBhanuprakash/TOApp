@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Task Manager</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<section class="main-section">
+			<h1>Task Manager</h1>
+			<div class="main-container">
+				<!-- Task Creation Form -->
+				<div class="task-form">
+					<form id="taskForm">
+						<label for="title">Task Title</label>
+						<input
+							type="text"
+							id="title"
+							placeholder="Enter task title"
+							required
+						/>
+						<br />
+
+						<label for="description">Task Description</label>
+						<textarea
+							id="description"
+							placeholder="Enter task description"
+							required
+						></textarea>
+
+						<label for="deadline">Deadline</label>
+						<input type="datetime-local" id="deadline" required />
+
+						<label for="priority">Priority</label>
+						<br />
+						<select id="priority">
+							<option value="high">High</option>
+							<option value="medium">Medium</option>
+							<option value="low">Low</option>
+						</select>
+
+						<label for="category">Category</label>
+						<select id="category">
+							<option value="work">Work</option>
+							<option value="personal">Personal</option>
+						</select>
+
+						<button type="submit">Add Task</button>
+					</form>
+				</div>
+
+				<!-- Task List Section -->
+				<div class="task-list">
+					<h2>Tasks</h2>
+					<ul id="tasks"></ul>
+				</div>
+
+				<!-- Completed Tasks Section -->
+				<div class="completed-tasks">
+					<h2>Completed Tasks</h2>
+					<button type="button" class="cleartasks">
+						Clear Completed Tasks
+					</button>
+					<ul id="completedTasks"></ul>
+				</div>
+			</div>
+		</section>
+
+		<script src="main.js"></script>
+	</body>
+</html>
